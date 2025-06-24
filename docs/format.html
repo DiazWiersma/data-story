@@ -411,7 +411,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-second-perspective">Your Second Perspective</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prijzen-blijven-stabiel">Prijzen blijven stabiel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mensen-kunnen-meer-uren-op-kantoor-werken">Mensen kunnen meer uren op kantoor werken</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
@@ -622,13 +622,169 @@ document.write(`
 <section id="your-second-perspective">
 <h2>Your Second Perspective<a class="headerlink" href="#your-second-perspective" title="Link to this heading">#</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-<section id="prijzen-blijven-stabiel">
-<h3>Prijzen blijven stabiel<a class="headerlink" href="#prijzen-blijven-stabiel" title="Link to this heading">#</a></h3>
-<p>In de heatmap hieronder is te zien hoe sterk de voedselprijzen van jaar tot jaar fluctueren. Deze volatiliteit is een maat voor hoe onvoorspelbaar prijzen zijn. Landen met donkere roodtinten kenden grote schommelingen in de voedselprijzen. Zulke prijsschokken worden vaak veroorzaakt door externe factoren zoals mislukte oogsten, oorlog of verstoringen in wereldwijde toeleveringsketens (“The State of Food Security and Nutrition in the World 2024,” 2024).</p>
+<section id="mensen-kunnen-meer-uren-op-kantoor-werken">
+<h3>Mensen kunnen meer uren op kantoor werken<a class="headerlink" href="#mensen-kunnen-meer-uren-op-kantoor-werken" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_productivity.csv&quot;</span><span class="p">)</span>
+
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Hours_Worked_Per_Week&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Well_Being_Score&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Employment_Type&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Remote&quot;</span><span class="p">:</span> <span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="s2">&quot;In-Office&quot;</span><span class="p">:</span> <span class="s2">&quot;salmon&quot;</span><span class="p">},</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">100</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Werktijd vs. Welzijnsscore per Werkvorm&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Uren gewerkt per week&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Welzijnsscore&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Werkvorm&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/195d433169fcb54ca783318f6e2d5582607ed77589b9e0bbfeabc80ef127f0ca.png" src="../_images/195d433169fcb54ca783318f6e2d5582607ed77589b9e0bbfeabc80ef127f0ca.png" />
+</div>
+</div>
 <blockquote>
 <div><p><em>Figuur 3: Overzicht volatiliteit voedselprijzen per land en jaar</em></p>
 </div></blockquote>
-<p>In een vrije markt reageren prijzen vrijwel direct op verstoringen: bij een daling van het aanbod stijgen de prijzen. Dit is duidelijk terug te zien in de relatief lage volatiliteit van de voedselprijzen, met uitzondering van enkele bijzondere gevallen. Deze uitzonderingen deden zich voor in situaties waarin de vrije markt nauwelijks invloed had. Zo leidde het conflict tussen de Sudanese overheid en een rebellengroep in 2022 en 2023 tot een logische en sterke toename van de prijsvolatiliteit (Wikipedia contributors, 2025). Dit toont dus aan dat de marktwerking wel degelijk werkt en er dus geen reden is voor overheidsingrijpen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_impact.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Verdeling social isolation rating per werkplek</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span>
+                    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Verdeling van Sociale Isolatie per Werkplek&#39;</span><span class="p">,</span>
+                    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Social Isolation Rating&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="s1">&#39;Aantal Respondenten&#39;</span><span class="p">},</span>
+                    <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Remote&#39;</span><span class="p">:</span> <span class="s1">&#39;#636EFA&#39;</span><span class="p">,</span> <span class="s1">&#39;Office&#39;</span><span class="p">:</span> <span class="s1">&#39;#EF553B&#39;</span><span class="p">})</span>
+<span class="n">fig1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="c1"># Boxplot: Social Isolation per Work Location</span>
+<span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">,</span>
+              <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">,</span>
+              <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Social Isolation Rating per Work Location&#39;</span><span class="p">,</span>
+              <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Social Isolation Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Work_Location&#39;</span><span class="p">:</span> <span class="s1">&#39;Werkplek&#39;</span><span class="p">},</span>
+              <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Remote&#39;</span><span class="p">:</span> <span class="s1">&#39;#636EFA&#39;</span><span class="p">,</span> <span class="s1">&#39;Office&#39;</span><span class="p">:</span> <span class="s1">&#39;#EF553B&#39;</span><span class="p">})</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="c1"># Scatterplot Social Isolation vs Stress Level (indien Stress_Level al numeriek is)</span>
+<span class="k">if</span> <span class="s1">&#39;Stress_Level_Num&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">fig3</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Stress_Level_Num&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">,</span>
+                      <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Social Isolation vs Stress Level&#39;</span><span class="p">,</span>
+                      <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Social Isolation Rating&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;Stress_Level_Num&#39;</span><span class="p">:</span> <span class="s1">&#39;Stress Level&#39;</span><span class="p">},</span>
+                      <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Remote&#39;</span><span class="p">:</span> <span class="s1">&#39;#636EFA&#39;</span><span class="p">,</span> <span class="s1">&#39;Office&#39;</span><span class="p">:</span> <span class="s1">&#39;#EF553B&#39;</span><span class="p">},</span>
+                      <span class="n">trendline</span><span class="o">=</span><span class="s1">&#39;ols&#39;</span><span class="p">)</span>
+    <span class="n">fig3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stress_Level_Num kolom niet gevonden, maak deze eerst numeriek.&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Boxplot: Social Isolation per Productivity Change</span>
+<span class="n">fig4</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Productivity_Change&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">,</span>
+              <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">,</span>
+              <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Social Isolation per Productivity Change&#39;</span><span class="p">,</span>
+              <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Productivity_Change&#39;</span><span class="p">:</span> <span class="s1">&#39;Productivity Change&#39;</span><span class="p">,</span> <span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Social Isolation Rating&#39;</span><span class="p">},</span>
+              <span class="n">category_orders</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Productivity_Change&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Increase&#39;</span><span class="p">,</span> <span class="s1">&#39;No Change&#39;</span><span class="p">,</span> <span class="s1">&#39;Decrease&#39;</span><span class="p">]},</span>
+              <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Remote&#39;</span><span class="p">:</span> <span class="s1">&#39;#636EFA&#39;</span><span class="p">,</span> <span class="s1">&#39;Office&#39;</span><span class="p">:</span> <span class="s1">&#39;#EF553B&#39;</span><span class="p">})</span>
+<span class="n">fig4</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_impact.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Verdeling social isolation rating per werkplek</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>                     <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Verdeling van Sociale Isolatie per Werkplek&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>                     <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Social_Isolation_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;Social Isolation Rating&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>                             <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="s1">&#39;Aantal Respondenten&#39;</span><span class="p">},</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>                     <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Remote&#39;</span><span class="p">:</span> <span class="s1">&#39;#636EFA&#39;</span><span class="p">,</span> <span class="s1">&#39;Office&#39;</span><span class="p">:</span> <span class="s1">&#39;#EF553B&#39;</span><span class="p">})</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.12/site-packages/pandas/io/common.py:873,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">876</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">877</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/Users/diazwiersma/data-story/docs/Graphs/remote_work_impact.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="references">
@@ -702,7 +858,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-second-perspective">Your Second Perspective</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prijzen-blijven-stabiel">Prijzen blijven stabiel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mensen-kunnen-meer-uren-op-kantoor-werken">Mensen kunnen meer uren op kantoor werken</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
