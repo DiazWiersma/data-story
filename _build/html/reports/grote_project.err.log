@@ -18,64 +18,46 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import plotly.express as px
-df = pd.read_csv("/Users/diazwiersma/data-story/docs/Graphs/remote_work_impact.csv")
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# Verdeling social isolation rating per werkplek
-fig1 = px.histogram(df, x='Social_Isolation_Rating', color='Work_Location', barmode='group',
-                    title='Verdeling van Sociale Isolatie per Werkplek',
-                    labels={'Social_Isolation_Rating': 'Social Isolation Rating',
-                            'count': 'Aantal Respondenten'},
-                    color_discrete_map={'Remote': '#636EFA', 'Office': '#EF553B'})
-fig1.show()
+df = pd.read_csv("remote_work_productivity.csv")
 
 
-# Boxplot: Social Isolation per Work Location
-fig2 = px.box(df, x='Work_Location', y='Social_Isolation_Rating',
-              color='Work_Location',
-              title='Social Isolation Rating per Work Location',
-              labels={'Social_Isolation_Rating': 'Social Isolation Rating', 'Work_Location': 'Werkplek'},
-              color_discrete_map={'Remote': '#636EFA', 'Office': '#EF553B'})
-fig2.update_layout(showlegend=False)
-fig2.show()
+sns.set(style="whitegrid")
+plt.figure(figsize=(10, 6))
 
+sns.scatterplot(
+    data=df,
+    x="Hours_Worked_Per_Week",
+    y="Well_Being_Score",
+    hue="Employment_Type",
+    palette={"Remote": "skyblue", "In-Office": "salmon"},
+    alpha=0.7,
+    edgecolor="w",
+    s=100
+)
 
-# Scatterplot Social Isolation vs Stress Level (indien Stress_Level al numeriek is)
-if 'Stress_Level_Num' in df.columns:
-    fig3 = px.scatter(df, x='Social_Isolation_Rating', y='Stress_Level_Num', color='Work_Location',
-                      title='Social Isolation vs Stress Level',
-                      labels={'Social_Isolation_Rating': 'Social Isolation Rating',
-                              'Stress_Level_Num': 'Stress Level'},
-                      color_discrete_map={'Remote': '#636EFA', 'Office': '#EF553B'},
-                      trendline='ols')
-    fig3.show()
-else:
-    print("Stress_Level_Num kolom niet gevonden, maak deze eerst numeriek.")
+plt.title("Werktijd vs. Welzijnsscore per Werkvorm", fontsize=14)
+plt.xlabel("Uren gewerkt per week", fontsize=12)
+plt.ylabel("Welzijnsscore", fontsize=12)
+plt.legend(title="Werkvorm")
+plt.tight_layout()
 
-
-# Boxplot: Social Isolation per Productivity Change
-fig4 = px.box(df, x='Productivity_Change', y='Social_Isolation_Rating',
-              color='Work_Location',
-              title='Social Isolation per Productivity Change',
-              labels={'Productivity_Change': 'Productivity Change', 'Social_Isolation_Rating': 'Social Isolation Rating'},
-              category_orders={'Productivity_Change': ['Increase', 'No Change', 'Decrease']},
-              color_discrete_map={'Remote': '#636EFA', 'Office': '#EF553B'})
-fig4.show()
+plt.show()
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[7], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexpress[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpx[39;00m
-[0;32m----> 2[0m df [38;5;241m=[39m pd[38;5;241m.[39mread_csv([38;5;124m"[39m[38;5;124m/Users/diazwiersma/data-story/docs/Graphs/remote_work_impact.csv[39m[38;5;124m"[39m)
-[1;32m      4[0m [38;5;66;03m# Verdeling social isolation rating per werkplek[39;00m
-[1;32m      5[0m fig1 [38;5;241m=[39m px[38;5;241m.[39mhistogram(df, x[38;5;241m=[39m[38;5;124m'[39m[38;5;124mSocial_Isolation_Rating[39m[38;5;124m'[39m, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mWork_Location[39m[38;5;124m'[39m, barmode[38;5;241m=[39m[38;5;124m'[39m[38;5;124mgroup[39m[38;5;124m'[39m,
-[1;32m      6[0m                     title[38;5;241m=[39m[38;5;124m'[39m[38;5;124mVerdeling van Sociale Isolatie per Werkplek[39m[38;5;124m'[39m,
-[1;32m      7[0m                     labels[38;5;241m=[39m{[38;5;124m'[39m[38;5;124mSocial_Isolation_Rating[39m[38;5;124m'[39m: [38;5;124m'[39m[38;5;124mSocial Isolation Rating[39m[38;5;124m'[39m,
-[1;32m      8[0m                             [38;5;124m'[39m[38;5;124mcount[39m[38;5;124m'[39m: [38;5;124m'[39m[38;5;124mAantal Respondenten[39m[38;5;124m'[39m},
-[1;32m      9[0m                     color_discrete_map[38;5;241m=[39m{[38;5;124m'[39m[38;5;124mRemote[39m[38;5;124m'[39m: [38;5;124m'[39m[38;5;124m#636EFA[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mOffice[39m[38;5;124m'[39m: [38;5;124m'[39m[38;5;124m#EF553B[39m[38;5;124m'[39m})
+Cell [0;32mIn[1], line 5[0m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mseaborn[39;00m [38;5;28;01mas[39;00m [38;5;21;01msns[39;00m
+[0;32m----> 5[0m df [38;5;241m=[39m pd[38;5;241m.[39mread_csv([38;5;124m"[39m[38;5;124mremote_work_productivity.csv[39m[38;5;124m"[39m)
+[1;32m      8[0m sns[38;5;241m.[39mset(style[38;5;241m=[39m[38;5;124m"[39m[38;5;124mwhitegrid[39m[38;5;124m"[39m)
+[1;32m      9[0m plt[38;5;241m.[39mfigure(figsize[38;5;241m=[39m([38;5;241m10[39m, [38;5;241m6[39m))
 
 File [0;32m/opt/anaconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026[0m, in [0;36mread_csv[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)[0m
 [1;32m   1013[0m kwds_defaults [38;5;241m=[39m _refine_defaults_read(
@@ -132,5 +114,5 @@ File [0;32m/opt/anaconda3/lib/python3.12/site-packages/pandas/io/common.py:873
 [1;32m    881[0m         [38;5;66;03m# Binary mode[39;00m
 [1;32m    882[0m         handle [38;5;241m=[39m [38;5;28mopen[39m(handle, ioargs[38;5;241m.[39mmode)
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/Users/diazwiersma/data-story/docs/Graphs/remote_work_impact.csv'
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'remote_work_productivity.csv'
 
