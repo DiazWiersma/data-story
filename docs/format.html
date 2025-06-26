@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Remote Work in Data: Efficiënter Werken of Teamspirit Verliezen? &#8212; Data Story Project</title>
+    <title>Efficiëntie op Afstand en de Valkuil van Overwerk &#8212; Data Story Project</title>
   
   
   
@@ -61,7 +61,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Preprocessing" href="preprocess.html" />
+    <link rel="next" title="Reflectie" href="reflectie.html" />
+    <link rel="prev" title="Data Preprocessing" href="preprocess.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -144,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="introductie.html">
   
   
   
@@ -169,14 +168,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
-                    Remote Work in Data: Efficiënter Werken of Teamspirit Verliezen?
+            <li class="toctree-l1">
+                <a class="reference internal" href="introductie.html">
+                    Introductie
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="preprocess.html">Data Preprocessing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Efficiëntie op Afstand en de Valkuil van Overwerk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflectie.html">Reflectie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Data Preprocessing</a></li>
 </ul>
 
     </div>
@@ -393,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Remote Work in Data: Efficiënter Werken of Teamspirit Verliezen?</h1>
+    <h1>Efficiëntie op Afstand en de Valkuil van Overwerk</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,8 +405,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">Introductie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-preprocessing">Dataset en Preprocessing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-kracht-van-remote-werken">De kracht van remote werken</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hogere-zelfgerapporteerde-productiviteit">Hogere zelfgerapporteerde productiviteit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minder-stress-betere-mentale-gezondheid-en-betere-wellbeing">Minder stress, betere mentale gezondheid en betere wellbeing</a></li>
@@ -426,179 +426,77 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="remote-work-in-data-efficienter-werken-of-teamspirit-verliezen">
-<h1>Remote Work in Data: Efficiënter Werken of Teamspirit Verliezen?<a class="headerlink" href="#remote-work-in-data-efficienter-werken-of-teamspirit-verliezen" title="Link to this heading">#</a></h1>
-<p>Studenten: Liam Boesten (15819965), Diaz Wiersma (15379078), Thomas Driesen (15831876), Kars Koopmanschap (15691241)</p>
-<p>Team nummer: 19</p>
-<section id="introductie">
-<h2>Introductie<a class="headerlink" href="#introductie" title="Link to this heading">#</a></h2>
-</section>
-<section id="dataset-en-preprocessing">
-<h2>Dataset en Preprocessing<a class="headerlink" href="#dataset-en-preprocessing" title="Link to this heading">#</a></h2>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="efficientie-op-afstand-en-de-valkuil-van-overwerk">
+<h1>Efficiëntie op Afstand en de Valkuil van Overwerk<a class="headerlink" href="#efficientie-op-afstand-en-de-valkuil-van-overwerk" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="de-kracht-van-remote-werken">
 <h2>De kracht van remote werken<a class="headerlink" href="#de-kracht-van-remote-werken" title="Link to this heading">#</a></h2>
 <section id="hogere-zelfgerapporteerde-productiviteit">
 <h3>Hogere zelfgerapporteerde productiviteit<a class="headerlink" href="#hogere-zelfgerapporteerde-productiviteit" title="Link to this heading">#</a></h3>
+<p>Op basis van een dataset van een survey met 1000 respondenten die hun eigen productiviteit een score gaven op een schaal van 0 tot 100, is een duidelijk verschil zichtbaar tussen remote en kantoorwerk. Werknemers die remote werken beoordelen hun productiviteit gemiddeld met een score van 73, terwijl kantoorwerkers een lagere gemiddelde score van 64 rapporteren. Deze visualisatie laat zien dat werknemers zichzelf over het algemeen als productiever ervaren in een remote werkomgeving dan op een fysieke werkplek.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_1.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;div style=&quot;text-align: center;&quot;&gt;</span>
+<span class="s1">  &lt;img src=&quot;Graphs/figure_1.png&quot; width=&quot;700&quot;&gt;</span>
+<span class="s1">&lt;/div&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02e5458175177280d53a3234ade24e4e4835732aa76a14828b8a37184ee33a1a.png" src="../_images/02e5458175177280d53a3234ade24e4e4835732aa76a14828b8a37184ee33a1a.png" />
+<div class="output text_html">
+<div style="text-align: center;">
+  <img src="Graphs/figure_1.png" width="700">
 </div>
+</div></div>
 </div>
 <blockquote>
 <div><p><em>Figuur 1: gemiddelde “Productivity Score” van zowel In-Office als Remote medewerkers</em></p>
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/The Impacts of Working Remotely and in an Office Survey.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># Bereken percentages</span>
-<span class="n">perc_yes</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Do you think that working from home increases your work productivity?&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Yes&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">perc_no</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">perc_yes</span>
-
-<span class="c1"># Labels en waarden voor de legenda</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ja&quot;</span><span class="p">,</span> <span class="s2">&quot;Nee&quot;</span><span class="p">]</span>
-<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">perc_yes</span><span class="p">,</span> <span class="n">perc_no</span><span class="p">]</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;salmon&#39;</span><span class="p">,</span> <span class="s1">&#39;skyblue&#39;</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">wedges</span><span class="p">,</span> <span class="n">texts</span><span class="p">,</span> <span class="n">autotexts</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
-    <span class="n">sizes</span><span class="p">,</span> 
-    <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> 
-    <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> 
-    <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> 
-    <span class="n">textprops</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">}</span>
-<span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Denk je dat werken vanuit huis je productiviteit op werk verhoogt?&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Cirkelvormig</span>
-
-<span class="c1"># Legenda toevoegen</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">wedges</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Antwoorden&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;Graphs/figure_2.png&quot; width=&quot;700&quot;&gt;&lt;/div&gt;&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/15c67d0e504f97b823027b7fcc5f486b48bd3b201736b3821ac8b8455e1225c9.png" src="../_images/15c67d0e504f97b823027b7fcc5f486b48bd3b201736b3821ac8b8455e1225c9.png" />
-</div>
+<div class="output text_html"><div style="text-align: center;"><img src="Graphs/figure_2.png" width="700"></div></div></div>
 </div>
 <blockquote>
 <div><p><em>Figuur 2: Perceptie van respondenten over de invloed van thuiswerken op productiviteit</em></p>
 </div></blockquote>
-<p>Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
 </section>
 <section id="minder-stress-betere-mentale-gezondheid-en-betere-wellbeing">
 <h3>Minder stress, betere mentale gezondheid en betere wellbeing<a class="headerlink" href="#minder-stress-betere-mentale-gezondheid-en-betere-wellbeing" title="Link to this heading">#</a></h3>
+<p>Remote workers geven aan productiever te zijn, maar heeft remote working ook invloed op hun mentale gezondheid?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Laad dataset</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/diazwiersma/data-story/docs/Graphs/Impact_of_Remote_Work_on_Mental_Health.csv&#39;</span><span class="p">)</span>
-
-<span class="c1"># Normaliseer kolomnamen en waarden</span>
-<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stress_Level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stress_Level&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mental_Health_Condition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mental_Health_Condition&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sleep_Quality&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sleep_Quality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-
-<span class="c1"># Welzijnsindicatoren</span>
-<span class="n">locations</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-<span class="n">indicators</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lage stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Geen mentale aandoening&#39;</span><span class="p">,</span> <span class="s1">&#39;Goede slaapkwaliteit&#39;</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="n">locations</span><span class="p">:</span>
-    <span class="n">subset</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Work_Location&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">location</span><span class="p">]</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
-    <span class="n">low_stress</span> <span class="o">=</span> <span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;Stress_Level&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Low&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="n">no_mental_issue</span> <span class="o">=</span> <span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;Mental_Health_Condition&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="n">good_sleep</span> <span class="o">=</span> <span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;Sleep_Quality&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Good&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">low_stress</span><span class="p">,</span> <span class="n">no_mental_issue</span><span class="p">,</span> <span class="n">good_sleep</span><span class="p">])</span>
-
-<span class="c1"># Transponeer</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># 3 x n matrix</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">locations</span><span class="p">))</span>
-<span class="n">bar_height</span> <span class="o">=</span> <span class="mf">0.2</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mediumseagreen&#39;</span><span class="p">,</span> <span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">]</span>
-
-<span class="c1"># Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indicators</span><span class="p">)):</span>
-    <span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">bar_height</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">height</span><span class="o">=</span><span class="n">bar_height</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">indicators</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
-        <span class="n">width</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">width</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_y</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
-                 <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">width</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
-
-<span class="c1"># Styling</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Percentage respondenten&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Werklocatie&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">bar_height</span><span class="p">,</span> <span class="n">locations</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Welzijnsindicatoren per werklocatie&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;img src=&quot;Graphs/figure_3.png&quot; width=&quot;1000&quot;&gt;&lt;/div&gt;&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6ad26222054277670370a4570ca3201437548b299ca8a2c8e00d613675d669b5.png" src="../_images/6ad26222054277670370a4570ca3201437548b299ca8a2c8e00d613675d669b5.png" />
-</div>
+<div class="output text_html"><div style="text-align: left;"><img src="Graphs/figure_3.png" width="1000"></div></div></div>
 </div>
 <blockquote>
 <div><p><em>Figuur 3: Vergelijking van welzijnsindicatoren tussen remote, onsite en hybride werkers</em></p>
 </div></blockquote>
-<p>Stijgende voedselprijzen raken dus niet iedereen even hard. In rijke huishoudens is voedsel een klein deel van het budget. In arme gezinnen is dat vaak meer dan 50%. Inflatie vergroot zo de ongelijkheid, zonder gerichte maatregelen dreigt basisvoeding onbetaalbaar te worden voor een groeiende groep mensen.</p>
+<p>In een survey werd aan werknemers gevraagd of zij stress ervaarden, een mentale aandoening hadden en of ze goed slapen. Uit de gegevens van die survey blijkt dat de aantallen werknemers die aangaven dat zij lage stress ervaarden, geen mentale aandoening hadden en goed slapen ongeveer gelijk zijn van zowel onsite werknemers, remote werknemers als hybrid (soms onsite en soms remote) werknemers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_productivity.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># Gemiddelde productivity per Employment_Type</span>
-<span class="n">avg_productivity</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Employment_Type&#39;</span><span class="p">)[</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="c1"># Bar chart</span>
-<span class="n">avg_productivity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="s1">&#39;salmon&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Gemiddeld Welzijn: Remote vs Office&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Well Being Score&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Employment Type&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;Graphs/figure_4.png&quot; width=&quot;700&quot;&gt;&lt;/div&gt;&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a2dcb5241b6af1588fbb8d210cc130faf130f1b4134af355c252c5de6a5cd756.png" src="../_images/a2dcb5241b6af1588fbb8d210cc130faf130f1b4134af355c252c5de6a5cd756.png" />
-</div>
+<div class="output text_html"><div style="text-align: center;"><img src="Graphs/figure_4.png" width="700"></div></div></div>
 </div>
 <blockquote>
 <div><p><em>Figuur 4: gemiddelde “Well Being Score” van zowel In-Office als Remote medewerkers</em></p>
@@ -607,51 +505,19 @@ document.write(`
 </section>
 <section id="meer-uren-is-minder-goed">
 <h2>Meer uren is minder goed<a class="headerlink" href="#meer-uren-is-minder-goed" title="Link to this heading">#</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
 <section id="meer-uren-verlaagt-productiviteit">
 <h3>Meer uren verlaagt productiviteit<a class="headerlink" href="#meer-uren-verlaagt-productiviteit" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_productivity.csv&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Welzijn&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;Graphs/figure_5.png&quot; width=&quot;1050&quot;&gt;&lt;/div&gt;&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2414b206b6b8cf6bb8aa1f5279e97d4959a52cd6ab5fad9fc22990225b099e56.png" src="../_images/2414b206b6b8cf6bb8aa1f5279e97d4959a52cd6ab5fad9fc22990225b099e56.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_productivity.csv&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Productiviteit&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/d4fd3cf5417544b98881b13990f867e9f1edf62552f3d51152b8c00707d860ad.png" src="../_images/d4fd3cf5417544b98881b13990f867e9f1edf62552f3d51152b8c00707d860ad.png" />
-</div>
+<div class="output text_html"><div style="text-align: center;"><img src="Graphs/figure_5.png" width="1050"></div></div></div>
 </div>
 <blockquote>
-<div><p><em>Figuur 3: Overzicht volatiliteit voedselprijzen per land en jaar</em></p>
+<div><p>*Figuur 6: Correlatie uren gewerkt, welzijn en productiviteit</p>
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4543,7 +4409,7 @@ maplibre-gl/dist/maplibre-gl.js:
 
 window.Plotly = Plotly;
 return Plotly;
-}));</script>                <div id="fba34014-7ecd-4446-984e-264de73d4ff1" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("fba34014-7ecd-4446-984e-264de73d4ff1")) {                    Plotly.newPlot(                        "fba34014-7ecd-4446-984e-264de73d4ff1",                        [{"hovertemplate":"Afdeling=Customer Support\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Customer Support","line":{"color":"#636efa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Customer Support","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"7FG4HkUbvEDNzMzMzNW7QFK4HoXryLtAmpmZmRkGvECPwvUonNy7QIXrUbheArxA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Engineering\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Engineering","line":{"color":"#EF553B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Engineering","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"cT0K1+Phu0BmZmZmJsS7QOF6FK5Hr7tA7FG4HsXNu0AAAAAAwMG7QM3MzMwM0btA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Finance\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Finance","line":{"color":"#00cc96","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Finance","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"PQrXo7D8u0BSuB6FK6e7QKRwPQqXE7xA16NwPQrwu0DXo3A9Sgm8QBSuR+H6qLtA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=HR\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"HR","line":{"color":"#ab63fa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"HR","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"FK5H4XoivEDhehSuxyi8QIXrUbgeNLxA9ihcj4Lpu0AAAAAAAO67QEjhehSuT7xA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=IT\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"IT","line":{"color":"#FFA15A","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"IT","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"rkfhehTfu0ApXI\u002fCNSC8QDMzMzOz07tAPQrXo3BLvECamZmZWUS8QAAAAAAA5LtA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Legal\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Legal","line":{"color":"#19d3f3","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Legal","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZqb7u0AAAAAAAO67QK5H4XrU+LtA9ihcj4Llu0DXo3A9CtC7QNejcD0KF7xA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Marketing\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Marketing","line":{"color":"#FF6692","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Marketing","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"CtejcH2zu0B7FK5HYba7QBSuR+F6FLxAuB6F6xHIu0AK16Nwvd+7QGZmZmYm8LtA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Operations\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Operations","line":{"color":"#B6E880","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Operations","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"XI\u002fC9ag6vECF61G4nkK8QHsUrkch4LtAexSuRyEkvEB7FK5HYdi7QAAAAAAAs7tA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Sales\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Sales","line":{"color":"#FF97FF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Sales","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"PQrXo\u002fD2u0AfhetROMu7QI\u002fC9SicDrxApHA9Cpfau0DNzMzMzM+7QOxRuB4FDbxA"},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Werkuren per week"},"tickmode":"array","tickvals":["30-34","35-39","40-44","45-49","50-54","55-59"],"ticktext":["30-34","35-39","40-44","45-49","50-54","55-59"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Gemiddeld maandsalaris (\u20ac)"}},"legend":{"title":{"text":"Afdeling"},"tracegroupgap":0},"title":{"text":"Gemiddeld maandsalaris vs werkuren per week (Consultants per afdeling)"}},                        {"responsive": true}                    )                };            </script>        </div>
+}));</script>                <div id="17a4dc05-ff71-43ff-96e2-f9dd4d1e5622" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("17a4dc05-ff71-43ff-96e2-f9dd4d1e5622")) {                    Plotly.newPlot(                        "17a4dc05-ff71-43ff-96e2-f9dd4d1e5622",                        [{"hovertemplate":"Afdeling=Customer Support\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Customer Support","line":{"color":"#636efa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Customer Support","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"7FG4HkUbvEDNzMzMzNW7QFK4HoXryLtAmpmZmRkGvECPwvUonNy7QIXrUbheArxA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Engineering\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Engineering","line":{"color":"#EF553B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Engineering","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"cT0K1+Phu0BmZmZmJsS7QOF6FK5Hr7tA7FG4HsXNu0AAAAAAwMG7QM3MzMwM0btA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Finance\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Finance","line":{"color":"#00cc96","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Finance","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"PQrXo7D8u0BSuB6FK6e7QKRwPQqXE7xA16NwPQrwu0DXo3A9Sgm8QBSuR+H6qLtA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=HR\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"HR","line":{"color":"#ab63fa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"HR","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"FK5H4XoivEDhehSuxyi8QIXrUbgeNLxA9ihcj4Lpu0AAAAAAAO67QEjhehSuT7xA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=IT\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"IT","line":{"color":"#FFA15A","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"IT","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"rkfhehTfu0ApXI\u002fCNSC8QDMzMzOz07tAPQrXo3BLvECamZmZWUS8QAAAAAAA5LtA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Legal\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Legal","line":{"color":"#19d3f3","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Legal","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZqb7u0AAAAAAAO67QK5H4XrU+LtA9ihcj4Llu0DXo3A9CtC7QNejcD0KF7xA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Marketing\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Marketing","line":{"color":"#FF6692","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Marketing","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"CtejcH2zu0B7FK5HYba7QBSuR+F6FLxAuB6F6xHIu0AK16Nwvd+7QGZmZmYm8LtA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Operations\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Operations","line":{"color":"#B6E880","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Operations","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"XI\u002fC9ag6vECF61G4nkK8QHsUrkch4LtAexSuRyEkvEB7FK5HYdi7QAAAAAAAs7tA"},"yaxis":"y","type":"scatter"},{"hovertemplate":"Afdeling=Sales\u003cbr\u003eWerkuren per week=%{x}\u003cbr\u003eGemiddeld maandsalaris (\u20ac)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Sales","line":{"color":"#FF97FF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"Sales","orientation":"v","showlegend":true,"x":["30-34","35-39","40-44","45-49","50-54","55-59"],"xaxis":"x","y":{"dtype":"f8","bdata":"PQrXo\u002fD2u0AfhetROMu7QI\u002fC9SicDrxApHA9Cpfau0DNzMzMzM+7QOxRuB4FDbxA"},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Werkuren per week"},"tickmode":"array","tickvals":["30-34","35-39","40-44","45-49","50-54","55-59"],"ticktext":["30-34","35-39","40-44","45-49","50-54","55-59"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Gemiddeld maandsalaris (\u20ac)"}},"legend":{"title":{"text":"Afdeling"},"tracegroupgap":0},"title":{"text":"Gemiddeld maandsalaris vs werkuren per week (Consultants per afdeling)"}},                        {"responsive": true}                    )                };            </script>        </div>
 </body>
 </html></div></div>
 </div>
@@ -4553,8 +4419,6 @@ return Plotly;
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>Sonntag, A. (n.d.). The right to food. <a class="reference external" href="http://Welthungerhilfe.de">Welthungerhilfe.de</a> - Für Eine Welt Ohne Hunger Und Armut. <a class="reference external" href="https://www.welthungerhilfe.org/our-work/focus-areas/partnering-with-civil-society/right-to-food#:~:text=Every%20human%20has%20the%20right%20to%20adequate%2C%20sufficient%2C,protect%20and%20ensure%20the%20human%20right%20to%20food">https://www.welthungerhilfe.org/our-work/focus-areas/partnering-with-civil-society/right-to-food#:~:text=Every human has the right to adequate%2C sufficient%2C,protect and ensure the human right to food</a>.<img alt="image.png" src="docs/attachment:a206e171-f8ff-4ac9-b35e-7b396eaea816.png" /><img alt="image.png" src="docs/attachment:5da1980b-e64b-48e1-8142-35b3aa8df1a6.png" /><img alt="image.png" src="docs/attachment:2778cfbf-216c-455b-a1a0-7320a6c31e91.png" /><img alt="image.png" src="docs/attachment:446c427c-95be-4af4-8070-a932c02cd72a.png" /></p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -4587,12 +4451,21 @@ return Plotly;
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="preprocess.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Preprocessing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="reflectie.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Preprocessing</p>
+        <p class="prev-next-title">Reflectie</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -4612,8 +4485,6 @@ return Plotly;
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">Introductie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-preprocessing">Dataset en Preprocessing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-kracht-van-remote-werken">De kracht van remote werken</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hogere-zelfgerapporteerde-productiviteit">Hogere zelfgerapporteerde productiviteit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minder-stress-betere-mentale-gezondheid-en-betere-wellbeing">Minder stress, betere mentale gezondheid en betere wellbeing</a></li>
