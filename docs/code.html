@@ -422,10 +422,10 @@ document.write(`
 
 
 <span class="c1"># Step 2: Load and filter the datasets</span>
-<span class="n">df_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/remote_work_productivity.csv&quot;</span><span class="p">)</span>
-<span class="n">df_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/The Impacts of Working Remotely and in an Office Survey.csv&quot;</span><span class="p">)</span>
-<span class="n">df_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/diazwiersma/data-story/docs/Graphs/Impact_of_Remote_Work_on_Mental_Health.csv&#39;</span><span class="p">)</span>
-<span class="n">df_4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/diazwiersma/data-story/docs/Graphs/Extended_Employee_Performance_and_Productivity_Data.csv&#39;</span><span class="p">)</span>
+<span class="n">df_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/remote_work_productivity.csv&quot;</span><span class="p">)</span>
+<span class="n">df_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/The Impacts of Working Remotely and in an Office Survey.csv&quot;</span><span class="p">)</span>
+<span class="n">df_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/diazwiersma/data-story/_static/Graphs/Impact_of_Remote_Work_on_Mental_Health.csv&#39;</span><span class="p">)</span>
+<span class="n">df_4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/diazwiersma/data-story/_static/Graphs/Extended_Employee_Performance_and_Productivity_Data.csv&#39;</span><span class="p">)</span>
 
 <span class="c1"># Step 3: Merge datasets</span>
 
@@ -442,7 +442,7 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_1.png&quot;</span><span class="p">)</span>  <span class="c1"># Opslaan voor hergebruik</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_1.png&quot;</span><span class="p">)</span>  <span class="c1"># Opslaan voor hergebruik</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Figuur 2</span>
@@ -456,7 +456,7 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">wedges</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Antwoorden&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_2.png&quot;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_2.png&quot;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1">#Figuur 3</span>
@@ -498,7 +498,7 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_3.png&quot;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_3.png&quot;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Figure 4</span>
@@ -512,7 +512,7 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_4.png&quot;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_4.png&quot;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Figure 5</span>
@@ -524,7 +524,7 @@ document.write(`
 <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Productiviteit&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_5.png&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_5.png&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Figure 6</span>
@@ -555,18 +555,7 @@ document.write(`
     <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gemiddeld maandsalaris vs werkuren per week (Consultants per afdeling)&#39;</span>
 <span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="n">tickvals</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">ticktext</span><span class="o">=</span><span class="n">labels</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/docs/Graphs/figure_6.html&quot;</span><span class="p">)</span>
-
-
-
-
-<span class="c1"># second_result_for_vis = process_second_result(filtered_data2)</span>
-<span class="c1"># third_result_for_vis = process_third_result(merged_data)</span>
-
-<span class="c1"># Step 5: Save the results into files</span>
-<span class="c1"># save_to_file(first_result_for_vis, &quot;table1.csv&quot;)</span>
-<span class="c1"># save_to_file(second_result_for_vis, &quot;table2.csv&quot;)</span>
-<span class="c1"># save_to_file(third_result_for_vis, &quot;table3.csv&quot;)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_6.html&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
