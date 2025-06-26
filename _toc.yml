@@ -2,10 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: docs/Introductie
+root: docs/introductie
 chapters:
   - file: docs/preprocess
   - file: docs/format
   - file: docs/reflectie
-  - file: docs/werkverdeling
   - file: docs/code
