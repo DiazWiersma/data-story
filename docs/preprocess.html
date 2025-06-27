@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Data Preprocessing &#8212; Data Story Project</title>
+    <title>Datasets en Preprocessing &#8212; Data Story Project</title>
   
   
   
@@ -175,11 +175,11 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Preprocessing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Datasets en Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="format.html">Efficiëntie op Afstand en de Valkuil van Overwerk</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="reflectie.html">Reflectie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code.html">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Preprocessing Code</a></li>
 </ul>
 
     </div>
@@ -383,7 +383,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -394,11 +396,40 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Preprocessing</h1>
+    <h1>Datasets en Preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-beschrijvingen">Dataset beschrijvingen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-remote-work-productivity">Dataset 1: remote_work_productivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-the-impacts-of-working-remotely-and-in-an-office-survey">Dataset 2: The Impacts of Working Remotely and in an Office Survey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-impact-of-remote-work-on-mental-health">Dataset 3: Impact_of_Remote_Work_on_Mental_Health</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-extended-employee-performance-and-productivity-data">Dataset 4: Extended_Employee_Performance_and_Productivity_Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#algemene-schoonmaakacties">Algemene schoonmaakacties:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-filtering">Data filtering:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelen">Variabelen</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-ratio">Continuous / Ratio:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-nominal">Categorical / Nominal:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinal">Ordinal:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -408,11 +439,126 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-preprocessing">
-<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h1>
-<p>Studenten: Liam Boesten (15819965), Diaz Wiersma (15379078), Thomas Driesen (15831876), Kars Koopmanschap (15691241)</p>
-<p>Team nummer: 19</p>
-<p>The following code is used to preprocess the datasets into files that are used for the data story.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="datasets-en-preprocessing">
+<h1>Datasets en Preprocessing<a class="headerlink" href="#datasets-en-preprocessing" title="Link to this heading">#</a></h1>
+<p>Om onze perspectieven te vormen voor deze opdracht, begonnen we met een korte brainstorm over mogelijke thema’s. Al snel werd gekozen voor het onderwerp <em>remote werken en productiviteit</em>. Hoewel de gevonden datasets interessante inzichten boden op het gebied van productiviteit en welzijn, bleek het lastig om een duidelijk tweede perspectief te formuleren, er ontbrak bijvoorbeeld een uitgesproken negatieve kant van remote werken, of een sterk afwijkend positief effect. De resultaten vielen vaak ergens in het midden.</p>
+<p>Daarom kozen we ervoor om ons tweede perspectief te richten op een ander relevant aspect van modern werken: het aantal gewerkte uren. Uiteindelijk formuleerden we de volgende twee perspectieven:</p>
+<ol class="arabic simple">
+<li><p><em>Remote werken leidt tot productievere en gelukkigere werknemers</em></p></li>
+<li><p><em>Minder werkuren leiden tot betere uitkomsten dan meer werkuren</em></p></li>
+</ol>
+<p>Op basis hiervan is definitief gekozen voor de volgende vier datasets.</p>
+<section id="dataset-beschrijvingen">
+<h2>Dataset beschrijvingen<a class="headerlink" href="#dataset-beschrijvingen" title="Link to this heading">#</a></h2>
+<section id="dataset-1-remote-work-productivity">
+<h3>Dataset 1: remote_work_productivity<a class="headerlink" href="#dataset-1-remote-work-productivity" title="Link to this heading">#</a></h3>
+<p>Deze dataset bevat zelfgerapporteerde informatie over werknemers die op afstand werken of op kantoor. De focus ligt op productiviteit en welzijn, met variabelen zoals Productivity_Score, Well_Being_Score, Employment_Type en Hours_Worked_Per_Week. Het doel is om de impact van de werklocatie op productiviteit en welzijn te onderzoeken.</p>
+</section>
+<section id="dataset-2-the-impacts-of-working-remotely-and-in-an-office-survey">
+<h3>Dataset 2: The Impacts of Working Remotely and in an Office Survey<a class="headerlink" href="#dataset-2-the-impacts-of-working-remotely-and-in-an-office-survey" title="Link to this heading">#</a></h3>
+<p>Deze survey-gebaseerde dataset onderzoekt de perceptie van werknemers over werken op afstand versus op kantoor. De gegevens bevatten meningen over productiviteit, communicatie, motivatie en werktevredenheid, en bieden inzicht in hoe werknemers hun werkomgeving ervaren.</p>
+</section>
+<section id="dataset-3-impact-of-remote-work-on-mental-health">
+<h3>Dataset 3: Impact_of_Remote_Work_on_Mental_Health<a class="headerlink" href="#dataset-3-impact-of-remote-work-on-mental-health" title="Link to this heading">#</a></h3>
+<p>Deze dataset richt zich op het verband tussen thuiswerken en mentale gezondheid. Respondenten geven informatie over stressniveaus, mentale aandoeningen en slaapkwaliteit, ingedeeld per werklocatie (zoals “Home” of “Office”). Dit maakt de dataset geschikt voor welzijnsanalyses binnen verschillende werkcontexten.</p>
+</section>
+<section id="dataset-4-extended-employee-performance-and-productivity-data">
+<h3>Dataset 4: Extended_Employee_Performance_and_Productivity_Data<a class="headerlink" href="#dataset-4-extended-employee-performance-and-productivity-data" title="Link to this heading">#</a></h3>
+<p>Deze uitgebreide dataset bevat informatie over werknemersprestaties, zoals maandelijkse salarissen, werkuren, afdelingen en functietitels (bijv. “Consultant”). De dataset is nuttig voor het analyseren van verbanden tussen werkbelasting en compensatie binnen verschillende bedrijfsfuncties.</p>
+</section>
+</section>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
+<section id="cleaning">
+<h3>Cleaning<a class="headerlink" href="#cleaning" title="Link to this heading">#</a></h3>
+<p>Voor deze analyse zijn vier datasets ingeladen, elk met een andere focus binnen het thema <strong>remote work</strong> (productiviteit, welzijn, mentale gezondheid en salarissen). De preprocessing en cleaning zijn per dataset uitgevoerd, afhankelijk van de structuur en kwaliteit van de data.</p>
+<section id="algemene-schoonmaakacties">
+<h4>Algemene schoonmaakacties:<a class="headerlink" href="#algemene-schoonmaakacties" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Verwijderen van overbodige spaties</strong> in kolomnamen en waardes (bijv. <code class="docutils literal notranslate"><span class="pre">str.strip()</span></code>).</p></li>
+<li><p><strong>Standaardisatie van categorische waarden</strong>, zoals het kapitaliseren van waarden in kolommen als <code class="docutils literal notranslate"><span class="pre">Work_Location</span></code>, <code class="docutils literal notranslate"><span class="pre">Stress_Level</span></code> en <code class="docutils literal notranslate"><span class="pre">Sleep_Quality</span></code>.</p></li>
+<li><p><strong>Omgaan met ontbrekende waarden</strong>:</p>
+<ul>
+<li><p>In de <code class="docutils literal notranslate"><span class="pre">Mental_Health_Condition</span></code>-kolom zijn lege waarden vervangen door <code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code> om analyse mogelijk te maken.</p></li>
+</ul>
+</li>
+<li><p><strong>Binning van continue variabelen</strong>:</p>
+<ul>
+<li><p>In de consultant dataset zijn werkuren gebundeld in categorieën van 5 uur (<code class="docutils literal notranslate"><span class="pre">30–34</span></code>, <code class="docutils literal notranslate"><span class="pre">35–39</span></code>, etc.) via <code class="docutils literal notranslate"><span class="pre">pd.cut()</span></code> om trends in salarisontwikkeling per werkuren inzichtelijk te maken.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="data-filtering">
+<h4>Data filtering:<a class="headerlink" href="#data-filtering" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Alleen respondenten met specifieke kenmerken zijn geselecteerd in bepaalde analyses. Zo zijn in één analyse (figure 8) alleen <strong>consultants</strong> meegenomen en uitgesplitst naar <strong>afdeling</strong> en <strong>werkuren</strong>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="variabelen">
+<h3>Variabelen<a class="headerlink" href="#variabelen" title="Link to this heading">#</a></h3>
+<p>De variabelen die in de analyses worden gebruikt, zijn een mix van continue en categorische variabelen. Hieronder volgt een classificatie per type meetschaal:</p>
+<section id="continuous-ratio">
+<h4>Continuous / Ratio:<a class="headerlink" href="#continuous-ratio" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Productivity_Score</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Well_Being_Score</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hours_Worked_Per_Week</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Monthly_Salary</span></code></p></li>
+</ul>
+</section>
+<section id="categorical-nominal">
+<h4>Categorical / Nominal:<a class="headerlink" href="#categorical-nominal" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Employment_Type</span></code> (Remote / On-Site)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Work_Location</span></code> (Home, Office, etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mental_Health_Condition</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Stress_Level</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sleep_Quality</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Department</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Job_Title</span></code></p></li>
+</ul>
+</section>
+<section id="ordinal">
+<h4>Ordinal:<a class="headerlink" href="#ordinal" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Hours_Bin</span></code> (gecategoriseerde werkuren per week)</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="aggregaties">
+<h3>Aggregaties<a class="headerlink" href="#aggregaties" title="Link to this heading">#</a></h3>
+<p>Verschillende vormen van aggregatie zijn toegepast om inzichten te verkrijgen:</p>
+<ul class="simple">
+<li><p><strong>Gemiddelde productiviteit en welzijn per werkvorm</strong>:</p>
+<ul>
+<li><p>Groepering op <code class="docutils literal notranslate"><span class="pre">Employment_Type</span></code>, gevolgd door <code class="docutils literal notranslate"><span class="pre">.mean()</span></code> op <code class="docutils literal notranslate"><span class="pre">Productivity_Score</span></code> en <code class="docutils literal notranslate"><span class="pre">Well_Being_Score</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Percentage berekeningen voor welzijnsindicatoren</strong>:</p>
+<ul>
+<li><p>Voor elke <code class="docutils literal notranslate"><span class="pre">Work_Location</span></code> is het percentage respondenten berekend dat:</p>
+<ul>
+<li><p>een <strong>lage stress</strong> ervaart,</p></li>
+<li><p><strong>geen mentale aandoeningen</strong> heeft,</p></li>
+<li><p><strong>goede slaapkwaliteit</strong> rapporteert.</p></li>
+</ul>
+</li>
+<li><p>De uitkomsten zijn uitgedrukt als percentages van het totaal per locatie.</p></li>
+</ul>
+</li>
+<li><p><strong>Binning en gemiddelden van salarissen per uurcategorie</strong>:</p>
+<ul>
+<li><p>Binnen de consultantgroep is het gemiddelde <strong>maandsalaris</strong> per combinatie van <code class="docutils literal notranslate"><span class="pre">Department</span></code> en <code class="docutils literal notranslate"><span class="pre">Hours_Bin</span></code> berekend.</p></li>
+<li><p>Dit maakt trends zichtbaar in salaris versus werkbelasting, uitgesplitst per afdeling.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -469,6 +615,42 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-beschrijvingen">Dataset beschrijvingen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-remote-work-productivity">Dataset 1: remote_work_productivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-the-impacts-of-working-remotely-and-in-an-office-survey">Dataset 2: The Impacts of Working Remotely and in an Office Survey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-impact-of-remote-work-on-mental-health">Dataset 3: Impact_of_Remote_Work_on_Mental_Health</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-extended-employee-performance-and-productivity-data">Dataset 4: Extended_Employee_Performance_and_Productivity_Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#algemene-schoonmaakacties">Algemene schoonmaakacties:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-filtering">Data filtering:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelen">Variabelen</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-ratio">Continuous / Ratio:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-nominal">Categorical / Nominal:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinal">Ordinal:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
