@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Data Preprocessing &#8212; Data Story Project</title>
+    <title>Preprocessing Code &#8212; Data Story Project</title>
   
   
   
@@ -174,11 +174,11 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="preprocess.html">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preprocess.html">Datasets en Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="format.html">Efficiëntie op Afstand en de Valkuil van Overwerk</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="reflectie.html">Reflectie</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Preprocessing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Preprocessing Code</a></li>
 </ul>
 
     </div>
@@ -393,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Preprocessing</h1>
+    <h1>Preprocessing Code</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,8 +407,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-preprocessing">
-<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="preprocessing-code">
+<h1>Preprocessing Code<a class="headerlink" href="#preprocessing-code" title="Link to this heading">#</a></h1>
 <p>De volgende code wordt gebruikt om de datasets te preprocessen tot bestanden die worden gebruikt voor het data story-project.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -535,18 +535,29 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Figure 6</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Welzijn&#39;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Productiviteit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Well_Being_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Welzijn&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Aantal gewerkte uren per week&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Well Being Score&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_6.png&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Figure 7</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hours_Worked_Per_Week&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Productivity_Score&#39;</span><span class="p">,</span> <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Uren gewerkt vs Productiviteit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Aantal gewerkte uren per week&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Productivity Score&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_7.png&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># Figure 8</span>
 <span class="c1">## Cleaning</span>
 <span class="n">consultants</span> <span class="o">=</span> <span class="n">df_4</span><span class="p">[</span><span class="n">df_4</span><span class="p">[</span><span class="s1">&#39;Job_Title&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Consultant&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># voorkomt SettingWithCopyWarning</span>
 <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
@@ -574,7 +585,7 @@ document.write(`
     <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gemiddeld maandsalaris vs werkuren per week (Consultants per afdeling)&#39;</span>
 <span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">tickmode</span><span class="o">=</span><span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="n">tickvals</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">ticktext</span><span class="o">=</span><span class="n">labels</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_7.html&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;/Users/diazwiersma/data-story/_static/Graphs/figure_8.html&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
