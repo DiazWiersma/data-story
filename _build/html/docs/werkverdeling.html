@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introductie &#8212; Data Story Project</title>
+    <title>Werkverdeling &#8212; Data Story Project</title>
   
   
   
@@ -57,11 +57,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/introductie';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/werkverdeling';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Datasets en Preprocessing" href="preprocess.html" />
+    <link rel="next" title="Preprocessing Code" href="code.html" />
+    <link rel="prev" title="Reflectie" href="reflectie.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -144,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="introductie.html">
   
   
   
@@ -169,18 +168,18 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="introductie.html">
                     Introductie
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="preprocess.html">Datasets en Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="format.html">Efficiëntie op Afstand en de Valkuil van Overwerk</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="reflectie.html">Reflectie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="werkverdeling.html">Werkverdeling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Werkverdeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="code.html">Preprocessing Code</a></li>
 </ul>
 
@@ -236,7 +235,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/MultiX-Amsterdam/data-story-example/blob/main/docs/docs/introductie.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/MultiX-Amsterdam/data-story-example/blob/main/docs/docs/werkverdeling.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +283,7 @@
       
       
       
-      <li><a href="https://github.com/MultiX-Amsterdam/data-story-example/issues/new?title=Issue%20on%20page%20%2Fdocs/introductie.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/MultiX-Amsterdam/data-story-example/issues/new?title=Issue%20on%20page%20%2Fdocs/werkverdeling.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +313,7 @@
       
       
       
-      <li><a href="../_sources/docs/introductie.ipynb" target="_blank"
+      <li><a href="../_sources/docs/werkverdeling.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -398,7 +397,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introductie</h1>
+    <h1>Werkverdeling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,8 +407,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteurs">Auteurs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diaz">Diaz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kars">Kars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liam">Liam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thomas">Thomas</a></li>
 </ul>
             </nav>
         </div>
@@ -421,25 +422,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introductie">
-<h1>Introductie<a class="headerlink" href="#introductie" title="Link to this heading">#</a></h1>
-<p>Sinds de coronapandemie is thuiswerken in een stroomversnelling geraakt. In Nederland werkt inmiddels meer dan de helft van de beroepsbevolking, zo’n vijf miljoen mensen, weleens vanuit huis (CBS, 2024). Maar wat betekent dit voor werknemers? Over de effecten van thuiswerken lopen de meningen uiteen. Voorstanders wijzen op hogere productiviteit, minder stress en een betere werk-privébalans. Tegenstanders waarschuwen juist voor sociale isolatie en afleidingen in de thuissituatie. Naast het thuiswerken is er ook discussie over de lengte van de werkweek. In Nederland ligt het gemiddelde op 32 uur, maar is meer werken altijd beter? Of heeft een lange werkweek juist negatieve gevolgen, zoals hogere stressniveaus en verminderde welzijn? In dit data story project worden twee perspectieven onderzocht: Thuiswerken verhoogt de productiviteit van werknemers. Een toename in het aantal gewerkte uren heeft negatieve effecten op de werknemer. Aan de hand van zelfgerapporteerde data uit remote-work-enquêtes, met metingen van onder andere productiviteit, stress, focus en gevoelens van isolatie, worden deze perspectieven onderbouwd en gevisualiseerd. Zo ontstaat een genuanceerd beeld van de impact van werkvormen en werkdruk op werknemers.</p>
-<section id="auteurs">
-<h2>Auteurs<a class="headerlink" href="#auteurs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Diaz Wiersma (15379078)</p></li>
-<li><p>Kars Koopmanschap (15691241)</p></li>
-<li><p>Thomas Driesen (15831876)</p></li>
-<li><p>Liam Boesten (15819965)</p></li>
-</ul>
-<p>Team nummer: 19</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="werkverdeling">
+<h1>Werkverdeling<a class="headerlink" href="#werkverdeling" title="Link to this heading">#</a></h1>
+<section id="diaz">
+<h2>Diaz<a class="headerlink" href="#diaz" title="Link to this heading">#</a></h2>
+<p>Diaz was verantwoordelijk voor de algemene coördinatie van het project, hierbij heeft Diaz het werk verdeeld onder de groepsleden, deadlines bijgehouden en afspraken gemaakt. Daarnaast heeft Diaz zich gericht op het vinden van geschikte datasets, het uitvoeren van de preprocessing van die datasets, het creëren van de visualisaties en het structureren van de website.</p>
 </section>
-<section id="referenties">
-<h2>Referenties<a class="headerlink" href="#referenties" title="Link to this heading">#</a></h2>
-<p>Centraal Bureau voor de Statistiek. (2024, 14 maart). Ruim helft Nederlanders werkt weleens thuis. Centraal Bureau Voor de Statistiek. <a class="reference external" href="https://www.cbs.nl/nl-nl/nieuws/2024/11/ruim-helft-nederlanders-werkt-weleens-thuis#:~:text=In%202023%20werkten%20ruim%205%20miljoen%20mensen%20soms,cijfers%20over%20thuiswerken%20uit%20de%20Enqu%C3%AAte%20beroepsbevolking%20(EBB)">https://www.cbs.nl/nl-nl/nieuws/2024/11/ruim-helft-nederlanders-werkt-weleens-thuis#:~:text=In 2023 werkten ruim 5 miljoen mensen soms,cijfers over thuiswerken uit de Enquête beroepsbevolking (EBB)</a>.</p>
+<section id="kars">
+<h2>Kars<a class="headerlink" href="#kars" title="Link to this heading">#</a></h2>
+<p>Kars was betrokken bij het creëren van de  Daarnaast heeft Kars ook geholpen aan het vormgeven van de algemene verhaallijn van de data story project, zoals het helpen vormgeven van de perspectieven en de argumenten zelf. Tot slot heeft Kars de conclusie geschreven</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+<section id="liam">
+<h2>Liam<a class="headerlink" href="#liam" title="Link to this heading">#</a></h2>
+<p>Liam heeft meegewerkt aan het uitwerken van de argumenten voor beide perspectieven. Hij hielp bij het formuleren van de kernpunten en dacht mee over welke gegevens en grafieken het beste gebruikt konden worden om de standpunten te ondersteunen. Daarnaast heeft Liam meegeholpen bij het uitwerken van de argumentatie, zodat dit overzichtelijk leesbaar was.</p>
+</section>
+<section id="thomas">
+<h2>Thomas<a class="headerlink" href="#thomas" title="Link to this heading">#</a></h2>
+<p>Thomas heeft meegewerkt aan het schrijven van de introductie, de reflectie en heeft de werkverdeling gemaakt. Daarnaast heeft Thomas ook meegeholpen met het verbeteren van de algemene structuur van het project.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,12 +472,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="reflectie.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Reflectie</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="preprocess.html"
+       href="code.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Datasets en Preprocessing</p>
+        <p class="prev-next-title">Preprocessing Code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -497,8 +506,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteurs">Auteurs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diaz">Diaz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kars">Kars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liam">Liam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thomas">Thomas</a></li>
 </ul>
   </nav></div>
 

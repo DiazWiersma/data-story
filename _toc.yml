@@ -7,4 +7,5 @@ chapters:
   - file: docs/preprocess
   - file: docs/format
   - file: docs/reflectie
+  - file: docs/werkverdeling
   - file: docs/code
